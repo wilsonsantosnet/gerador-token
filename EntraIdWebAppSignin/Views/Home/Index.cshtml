@@ -1,0 +1,74 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<style>
+    table {
+        border-collapse: collapse;
+        width: 600px;
+    }
+
+    th, td {
+        text-align: justify;
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+        border-top: 1px solid #ddd;
+    }
+
+    #input {
+        overflow: auto; /* Adiciona barra de rolagem quando necessário */
+        word-wrap: break-word; /* Quebra o texto em várias linhas */
+        border: 1px solid #ccc; /* Adiciona uma borda */
+        border-radius: 10px; /* Borda arredondada */
+        padding: 10px; /* Espaçamento interno */
+    }
+</style>
+<div class="text-center">
+    <h3>Olá @User.Identity.Name</h3>
+    @* <input id="input" type="text" value="@ViewBag.AccessToken" style="width:auto"/><br> *@
+    <div id="input" style="width:100%">@ViewBag.AccessToken</div>
+    <br>
+    <button id="clipboardCopy"> clipboard Copy </button>
+
+@*     @if (@User.Identity is not null && @User.Identity.IsAuthenticated)
+    {
+
+         <p>You are signed in! Below are the claims in your ID token. For more information, visit: <a href="https://learn.microsoft.com/azure/active-directory/develop/id-tokens">Microsoft identity platform ID tokens</a></p>
+
+        <table>
+            <tbody>
+                <tr>
+                    <td>AccessToken</td>
+                    <td>@ViewBag.AccessToken</td>
+                </tr>
+                @foreach (var item in @User.Claims)
+                {
+                    <tr>
+                        <td>@item.Type</td>
+                        <td>@item.Value</td>
+                    </tr>
+                }
+            </tbody>
+        </table> 
+    }
+
+    <br />
+    <p>Learn about <a href="https://learn.microsoft.com/azure/active-directory/develop/v2-overview">building web apps with Microsoft identity platform</a>.</p> *@
+</div>
+<script type="text/javascript">
+    // Type 1
+    // document.getElementById('execCopy').addEventListener('click', execCopy);
+    // function execCopy() {
+    //     document.querySelector("#input").select();
+    //     document.execCommand("copy");
+    // }
+
+    // Type 2
+    document.getElementById('clipboardCopy').addEventListener('click', clipboardCopy);
+    async function clipboardCopy() {
+        let text = document.querySelector("#input").textContent
+        await navigator.clipboard.writeText(text);
+        window.location.href = "Home/Logout";
+    }
+</script>

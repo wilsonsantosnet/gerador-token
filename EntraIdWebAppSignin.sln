@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34701.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntraIdWebAppSignin", "EntraIdWebAppSignin\EntraIdWebAppSignin.csproj", "{DF646A55-067A-4514-B2EA-30DC0A7DA000}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntraIdWebAPI", "EntraIdWebAPI\EntraIdWebAPI.csproj", "{12772014-76F5-4492-A12E-0261FD13E635}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF646A55-067A-4514-B2EA-30DC0A7DA000}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF646A55-067A-4514-B2EA-30DC0A7DA000}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF646A55-067A-4514-B2EA-30DC0A7DA000}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF646A55-067A-4514-B2EA-30DC0A7DA000}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12772014-76F5-4492-A12E-0261FD13E635}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12772014-76F5-4492-A12E-0261FD13E635}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12772014-76F5-4492-A12E-0261FD13E635}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12772014-76F5-4492-A12E-0261FD13E635}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {62C28082-BEBA-46CB-879F-FA478FDD5BC6}
+	EndGlobalSection
+EndGlobal
